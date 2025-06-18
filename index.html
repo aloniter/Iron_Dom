@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron DOM - Missile Defense Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="ui-overlay">
+            <div class="score-panel">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="hits">Hits: <span id="hits">0</span>/5</div>
+                <div class="intercepts">Intercepts: <span id="intercepts">0</span>/20</div>
+            </div>
+            
+            <div class="game-message" id="gameMessage">
+                <h2>Iron DOM</h2>
+                <p>Use arrow keys to control your interceptor missile!</p>
+                <p>Crash into enemy missiles to destroy them and protect the cities below.</p>
+                <p><strong>Controls:</strong> ↑↓←→ Arrow Keys</p>
+                
+                <div class="control-selection">
+                    <h3>Choose Control Mode:</h3>
+                    <button id="arrowsBtn" class="control-mode-btn active">Arrow Keys</button>
+                    <button id="mouseBtn" class="control-mode-btn">Mouse/Touch</button>
+                </div>
+                
+                <button id="startBtn">Start Game</button>
+            </div>
+            
+            <div class="controls">
+                <button id="pauseBtn" class="control-btn">Pause</button>
+                <button id="restartBtn" class="control-btn">Restart</button>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html> 
